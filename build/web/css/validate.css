@@ -1,0 +1,293 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 10, 2018, 12:49:08 PM
+    Author     : Student
+*/
+
+*{
+  margin: 0;
+  }
+
+  body{
+   background-color: #1A1A1D;
+   padding-top: 30px;
+   padding-bottom: auto;
+   height: 100vh;
+   width: 100%;
+   overflow-x: hidden
+}
+
+  .reg{
+    width:1280px;
+    margin: 20px auto;
+    padding: 15px 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    /* box-shadow: 15px solid #ccc; */
+    /* box-shadow: rgba(255,255,255,0.5); */
+}
+.reg input{
+     width:50%;
+     margin: 10px 0px;
+     padding: 6px 4px;
+}
+.reg button{
+     margin: 8px 0px;
+}
+#center{
+
+  padding-top: 10px;
+  padding-bottom: 30px;
+  font-size: 24px;
+
+}
+#create {
+  /* text-decoration: none; */
+  border-color: #3ac162;
+  background: #fff;
+  color: #3ac162;
+}
+#create a{
+  text-decoration: none;
+
+}
+
+
+ .error{
+     color:red;
+
+     animation: shake 0.5s;
+     animation-iteration-count: 2;
+     font-size:12px;
+ }
+
+ *, *:before, *:after {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+ }
+
+ body {
+   font-family: 'Nunito', sans-serif;
+   color: #384047;
+ }
+
+ form {
+   max-width: 300px;
+   margin: 10px auto;
+   padding: 10px 20px;
+   background: #f4f7f8;
+   border-radius: 8px;
+ }
+
+ h1 {
+   margin: 0 0 30px 0;
+   text-align: center;
+ }
+
+/* input[type="text"],
+{
+   background: rgba(255,255,255,0.1);
+   border: none;
+   padding: 15px;
+   margin: 0;
+   float: left;
+   width: 50%;
+   font-size: 16px;
+   height: auto;
+   outline: 0;
+   background-color: #e8eeef;
+   color: #8a97a0;
+   box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+   margin-bottom: 30px;
+
+ }
+
+  input[type="mob"]{
+    background: rgba(255,255,255,0.1);
+    border: none;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: 15px;
+    float: right;
+    width: 50%;
+    background-color: #e8eeef;
+    color: #8a97a0;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 30px;
+
+
+  } */
+/* Update Password Btn */
+                        #goback {
+                          border-radius: 4px;
+                          background-color: #f4f7f8;
+                          border: none;
+                          color: #3ac162;
+                          text-align: center;
+                          font-size: 28px;
+                          padding: 50px auto;
+                          width: 100%;
+                          transition: all 0.5s;
+                          cursor: pointer;
+                          margin: auto;
+                          text-align: center;
+                          font-size: 20px;
+                          border-radius: 10px;
+                        }
+
+                        #goback span {
+                          cursor: pointer;
+                          display: inline-block;
+                          position: relative;
+                          transition: 0.5s;
+                        }
+
+                        #goback span:after {
+                          content: '\00bb';
+                          position: absolute;
+                          opacity: 0;
+                          top: 0;
+                          right: -20px;
+                          transition: 0.5s;
+                        }
+
+                        #goback:hover span {
+                          padding-right: 25px;
+                        }
+
+                        #goback:hover span:after {
+                          opacity: 1;
+                          right: 0;
+                        }
+ input[type="text"],
+ input[type="password"],
+ input[type="zip"],
+  input[type="mob"],
+ input[type="email"],
+ input[type="number"],
+ textarea,
+ select {
+   background: rgba(255,255,255,0.1);
+   border: none;
+   font-size: 16px;
+   height: auto;
+   margin: 0;
+   outline: 0;
+   padding: 15px;
+   width: 100%;
+   background-color: #e8eeef;
+   color: #8a97a0;
+   box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+   margin-bottom: 30px;
+ }
+input[type="text"]:focus,
+ input[type="password"]:focus,
+ input[type="zip"]:focus,
+  input[type="mob"]:focus,
+ input[type="email"]:focus,
+ input[type="number"]:focus,
+
+
+ textarea:focus{
+     border:1px solid #3ac162;
+ }
+ input[type="radio"]
+  {
+   padding-bottom: 0px;
+ }
+ input[type="submit"]{
+      
+  background: #3ac162;
+  color: #fff;
+  width: 100%;
+  border-radius: 10px;
+  padding: 20px 40px;
+  font-size: 18px;
+  text-align: center;
+  transition: 0.5s;
+  border: none;
+ }
+/* input[type="submit"]:hover{
+     background: #fff;
+     color: #3ac162;
+     font-weight: lighter;
+     border: 1px solid #3ac162;
+        
+ }*/
+ /* #male,#female{
+   margin: 0;
+ } */
+
+ select {
+   padding: 6px;
+   height: 32px;
+   border-radius: 2px;
+ }
+
+ button {
+   padding: 19px 39px 18px 39px;
+   color: #FFF;
+   background-color: #4bc970;
+   font-size: 18px;
+   text-align: center;
+   font-style: normal;
+   border-radius: 5px;
+   width: 100%;
+   border: 1px solid #3ac162;
+   border-width: 1px 1px 3px;
+   box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+   margin-bottom: 10px;
+ }
+
+ fieldset {
+   margin-bottom: 30px;
+   border: none;
+ }
+
+ legend {
+   font-size: 1.4em;
+   margin-bottom: 10px;
+ }
+
+ label {
+   display: block;
+   margin-bottom: 8px;
+ }
+
+ label.light {
+   font-weight: 300;
+   display: inline;
+ }
+
+ .number {
+   background-color: #5fcf80;
+   color: #fff;
+   height: 30px;
+   width: 30px;
+   display: inline-block;
+   font-size: 0.8em;
+   margin-right: 4px;
+   line-height: 30px;
+   text-align: center;
+   text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+   border-radius: 100%;
+ }
+
+ @media screen and (min-width: 480px) {
+
+   form {
+     padding-top: 0px;
+     margin: 0;
+     max-width: 480px;
+     width: 100%;
+     padding: 0;
+   }
+
+ }

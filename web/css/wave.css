@@ -1,0 +1,118 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+.container{
+  height: 100vh;
+
+}
+.section{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, .6),rgba(0, 0, 0, .6)),  url(https://images.unsplash.com/photo-1506962240359-bd03fbba0e3d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1946&q=80);
+  background-attachment: fixed;
+  /* background-origin: border-box; */
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: cover;
+
+}
+.section img{
+  height: 100vh;
+  width: 100%;
+  top:0;
+  position: absolute;
+  z-index: -1000;
+}
+.section-title{
+  /* width: 100%;
+  height: 20px;
+  color: 1a1a1d;
+  cursor: pointer; */
+  display: inline-block;
+  position: relative;
+
+}
+.section-title::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #1a1a1d;
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+
+
+}
+.section-title:hover::before{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.wave{
+  position: absolute;
+  width: 100%;
+  height: 143px;
+  bottom: 0;
+  left: 0;
+  background: url(../img/wave.png);
+  /* opacity: 0.7; */
+  animation: animate 10s linear infinite;
+}
+.wave1{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  /* bottom: 0;
+  left: 0;
+  background: url(wave.png);
+  animation: animate 10s linear infinite; */
+}
+
+.wave::before{
+  content: '';
+  width: 100%;
+  height: 143px;
+  background: url(../img/wave.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.4;
+  animation: animate-reverse 10s linear infinite;
+
+}
+.wave::after{
+  content: '';
+  width: 100%;
+  height: 143px;
+  background: url(../img/wave.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.4;
+  animation-delay: -5s;
+  animation: animate 20s linear infinite;
+
+}
+@keyframes animate {
+  0%{
+    background-position: 0;
+
+  }
+  100%{
+    background-position: 1360px;
+  }
+
+}
+@keyframes animate-reverse {
+  0%{
+    background-position: 1360px;
+
+  }
+  100%{
+    background-position: 0;
+  }
+
+}

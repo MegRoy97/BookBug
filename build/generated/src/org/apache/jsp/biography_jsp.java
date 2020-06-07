@@ -1,0 +1,444 @@
+package org.apache.jsp;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.jsp.*;
+import java.sql.ResultSet;
+import java.sql.PreparedStatement;
+import com.bookbug.connection.DbConnection;
+import com.bookbug.bean.Product;
+import com.bookbug.dao.Dao;
+
+public final class biography_jsp extends org.apache.jasper.runtime.HttpJspBase
+    implements org.apache.jasper.runtime.JspSourceDependent {
+
+  private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
+
+  private static java.util.List<String> _jspx_dependants;
+
+  private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
+
+  public java.util.List<String> getDependants() {
+    return _jspx_dependants;
+  }
+
+  public void _jspService(HttpServletRequest request, HttpServletResponse response)
+        throws java.io.IOException, ServletException {
+
+    PageContext pageContext = null;
+    HttpSession session = null;
+    ServletContext application = null;
+    ServletConfig config = null;
+    JspWriter out = null;
+    Object page = this;
+    JspWriter _jspx_out = null;
+    PageContext _jspx_page_context = null;
+
+    try {
+      response.setContentType("text/html;charset=UTF-8");
+      pageContext = _jspxFactory.getPageContext(this, request, response,
+      			null, true, 8192, true);
+      _jspx_page_context = pageContext;
+      application = pageContext.getServletContext();
+      config = pageContext.getServletConfig();
+      session = pageContext.getSession();
+      out = pageContext.getOut();
+      _jspx_out = out;
+      _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
+
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<!DOCTYPE html>\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("            \n");
+      out.write("            \n");
+      out.write("<html lang=\"en\" >\n");
+      out.write("\n");
+      out.write("<head>\n");
+      out.write("  <meta charset=\"UTF-8\">\n");
+      out.write("  <title>Welcome | BOOKBUG</title>\n");
+      out.write("  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n");
+      out.write("\n");
+      out.write("<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>\n");
+      out.write("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css\">\n");
+      out.write("<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\">\n");
+      out.write("<link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.8.1/css/all.css\" integrity=\"sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf\" crossorigin=\"anonymous\">\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<!-- <link href=\"css/bootstrap.min.css\" rel=\"stylesheet\"> -->\n");
+      out.write("<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<link rel=\"stylesheet\" href=\"//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css\">\n");
+      out.write("  <link rel=\"stylesheet\" href=\"/resources/demos/style.css\">\n");
+      out.write("  <script src=\"https://code.jquery.com/jquery-1.12.4.js\"></script>\n");
+      out.write("  <script src=\"https://code.jquery.com/ui/1.12.1/jquery-ui.js\"></script>\n");
+      out.write("  \n");
+      out.write("  <!--RANGE slider-->\n");
+      out.write("  <!--<link rel=\"stylesheet\" href=\"https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css\">-->\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<link rel=\"stylesheet\" href=\"css/styl1.css\">\n");
+      out.write("<link rel=\"stylesheet\" href=\"css/merchant.css\">\n");
+      out.write("<link rel=\"stylesheet\" href=\"css/style_1.css\">\n");
+      out.write("<!-- <link rel=\"stylesheet\" href=\"css/admin.css\"> -->\n");
+      out.write("<style>\n");
+      out.write("    .author{\n");
+      out.write("        max-height: 260px;\n");
+      out.write("        overflow-y: scroll;\n");
+      out.write("    }\n");
+      out.write("    .author::-webkit-scrollbar {\n");
+      out.write("        display: none;\n");
+      out.write("    }\n");
+      out.write("    \n");
+      out.write("    li{\n");
+      out.write("        list-style: none;\n");
+      out.write("        padding-left: 0;\n");
+      out.write("    }\n");
+      out.write(".container2{\n");
+      out.write("  float: right;\n");
+      out.write("  width: 80%;\n");
+      out.write("}\n");
+      out.write(".sidenav {\n");
+      out.write("  height: 100%;\n");
+      out.write("  width: 15%;\n");
+      out.write("  position: fixed;\n");
+      out.write("  float: left;\n");
+      out.write("  z-index: 1;\n");
+      out.write("  top: 0;\n");
+      out.write("  left: 0;\n");
+      out.write("  background-color: #afd566;\n");
+      out.write("  overflow-x: hidden;\n");
+      out.write("  padding-top: 150px;\n");
+      out.write("  text-align: center;\n");
+      out.write("}\n");
+      out.write(".sidenav h2{\n");
+      out.write("  font-size: 1.5em;\n");
+      out.write("}\n");
+      out.write(".sidenav a {\n");
+      out.write("  padding: 7% 10% 7% 10%;\n");
+      out.write("  text-decoration: none;\n");
+      out.write("  font-size: 1.2em;\n");
+      out.write("  color: #000;\n");
+      out.write("  display: block;\n");
+      out.write("  border-bottom: 1px solid #1a1a1d;\n");
+      out.write("}\n");
+      out.write("\n");
+      out.write(".sidenav a:hover {\n");
+      out.write("  color: #818181;\n");
+      out.write("}\n");
+      out.write("\n");
+      out.write(".main {\n");
+      out.write("  margin-left: 200px; /* Same as the width of the sidenav */\n");
+      out.write("}\n");
+      out.write("\n");
+      out.write("@media screen and (max-height: 999px) {\n");
+      out.write("  .sidenav h2{font-size: 1em;}\n");
+      out.write("  .sidenav {padding-top: calc(80vh/2);}\n");
+      out.write("  .sidenav a {font-size: .8em;}\n");
+      out.write("}\n");
+      out.write("</style>\n");
+      out.write("</head>\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<body>\n");
+      out.write("\n");
+      out.write("  <header class=\"container-fluid header\">\n");
+      out.write("\n");
+      out.write("      <div class=\"container cf\">\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("          <a href=\"indx.html\"><div class=\"brand\">\n");
+      out.write("\n");
+      out.write("            <img src=\"log.png\" alt=\"\" height=\"65px\" width=\"95px\" style=\"left: 0; transform: translateY(-35%);\">\n");
+      out.write("             &nbsp;\n");
+      out.write("            <span>B</span>\n");
+      out.write("            <span class=\"hidden\">O</span>\n");
+      out.write("            <span class=\"hidden\">O</span>\n");
+      out.write("            <span class=\"hidden\">K</span>\n");
+      out.write("            <span>B</span>\n");
+      out.write("            <span class=\"hidden\">U</span>\n");
+      out.write("            <span class=\"hidden\">G</span>\n");
+      out.write("\n");
+      out.write("          </div></a>\n");
+      out.write("\n");
+      out.write("          <i class=\"fa fa-bars hamb\"></i>\n");
+      out.write("\n");
+      out.write("           <ul>\n");
+      out.write("              <li ><a href=\"shop.html\" class=\"active-class\"><i class=\"fas fa-shopping-bag\"></i>&nbsp;Store</a></li>\n");
+      out.write("              <li><a href=\"about.html\"><i class=\"fas fa-users\"></i>&nbsp;About Us</a></li>\n");
+      out.write("              <li><a href=\"reglogin.html\"><i class=\"fa fa-user\" aria-hidden=\"true\"></i>&nbsp;Login / Register</a></li>\n");
+      out.write("              <li><a href=\"reglogin.html\"><i class=\"fa fa-shopping-cart\" aria-hidden=\"true\"></i>&nbsp;0 Items</a></li>\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("          </ul>\n");
+      out.write("\n");
+      out.write("      </div>\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("  </header>\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("  <div class=\"sidenav\" style=\"padding-top: 68px;margin-top: 0px;\">\n");
+      out.write("    \t<div class=\"cd-filter\">\n");
+      out.write("\t\t\t<form>\n");
+      out.write("\t\t\t\t<div class=\"cd-filter-block\">\n");
+      out.write("\t\t\t\t\t<h4>Search</h4>\n");
+      out.write("\n");
+      out.write("\t\t\t\t\t<div class=\"cd-filter-content\">\n");
+      out.write("\t\t\t\t\t\t<input type=\"search\" placeholder=\"Try color-1...\">\n");
+      out.write("\t\t\t\t\t</div> <!-- cd-filter-content -->\n");
+      out.write("\t\t\t\t</div> <!-- cd-filter-block -->\n");
+      out.write("\n");
+      out.write("\t\t\t\t<div class=\"cd-filter-block author\">\n");
+      out.write("\t\t\t\t\t<h4>Check boxes</h4>\n");
+      out.write("\n");
+      out.write("\t\t\t\t\t<ul class=\"cd-filter-content cd-filters list\" style=\"padding-left: 5%;\">\n");
+      out.write("\t\t\t\t\t\t<li>\n");
+      out.write("                                                    <input class=\"filter\" type=\"checkbox\" id=\"checkbox1\" value=\"Option1\"  >\n");
+      out.write("\t\t\t    \t\t\t<label class=\"checkbox-label\" for=\"checkbox1\">Option 1</label>\n");
+      out.write("\t\t\t\t\t\t</li>\n");
+      out.write("\n");
+      out.write("\t\t\t\t\t\t<li>\n");
+      out.write("\t\t\t\t\t\t\t<input class=\"filter\" type=\"checkbox\" id=\"checkbox2\" value=\"Option2\">\n");
+      out.write("\t\t\t\t\t\t\t<label class=\"checkbox-label\" for=\"checkbox2\">Option 2</label>\n");
+      out.write("\t\t\t\t\t\t</li>\n");
+      out.write("\n");
+      out.write("\t\t\t\t\t\t<li>\n");
+      out.write("\t\t\t\t\t\t\t<input class=\"filter\" type=\"checkbox\" id=\"checkbox3\" value=\"Option3\">\n");
+      out.write("\t\t\t\t\t\t\t<label class=\"checkbox-label\" for=\"checkbox3\">Option 3</label>\n");
+      out.write("\t\t\t\t\t\t</li>\n");
+      out.write("                                                <li>\n");
+      out.write("\t\t\t\t\t\t\t<input class=\"filter\" type=\"checkbox\" id=\"checkbox4\" value=\"Option3\">\n");
+      out.write("\t\t\t\t\t\t\t<label class=\"checkbox-label\" for=\"checkbox3\">Option 4</label>\n");
+      out.write("\t\t\t\t\t\t</li>\n");
+      out.write("                                                <li>\n");
+      out.write("\t\t\t\t\t\t\t<input class=\"filter\" type=\"checkbox\" id=\"checkbox5\" value=\"Option3\">\n");
+      out.write("\t\t\t\t\t\t\t<label class=\"checkbox-label\" for=\"checkbox5\">Option 5</label>\n");
+      out.write("\t\t\t\t\t\t</li>\n");
+      out.write("                                                <li>\n");
+      out.write("\t\t\t\t\t\t\t<input class=\"filter\" type=\"checkbox\" id=\"checkbox6\" value=\"Option3\">\n");
+      out.write("\t\t\t\t\t\t\t<label class=\"checkbox-label\" for=\"checkbox6\">Option 6</label>\n");
+      out.write("\t\t\t\t\t\t</li>\n");
+      out.write("\t\t\t\t\t</ul> <!-- cd-filter-content -->\n");
+      out.write("\t\t\t\t</div> <!-- cd-filter-block -->\n");
+      out.write("\n");
+      out.write("\t\t\t\t<div class=\"cd-filter-block\">\n");
+      out.write("\t\t\t\t\t<h4>Select</h4>\n");
+      out.write("\n");
+      out.write("\t\t\t\t\t<div class=\"cd-filter-content\">\n");
+      out.write("\t\t\t\t\t\t<div class=\"cd-select cd-filters\">\n");
+      out.write("\t\t\t\t\t\t\t<select class=\"filter\" name=\"\" id=\"selectThis\">\n");
+      out.write("\t\t\t\t\t\t\t\t<option value=\"\">Choose an option</option>\n");
+      out.write("\t\t\t\t\t\t\t\t<option value=\"\">Option 1</option>\n");
+      out.write("\t\t\t\t\t\t\t\t<option value=\"\">Option 2</option>\n");
+      out.write("\t\t\t\t\t\t\t\t<option value=\"\">Option 3</option>\n");
+      out.write("\t\t\t\t\t\t\t\t<option value=\"\">Option 4</option>\n");
+      out.write("\t\t\t\t\t\t\t</select>\n");
+      out.write("\t\t\t\t\t\t</div> <!-- cd-select -->\n");
+      out.write("\t\t\t\t\t</div> <!-- cd-filter-content -->\n");
+      out.write("\t\t\t\t</div> <!-- cd-filter-block -->\n");
+      out.write("\n");
+      out.write("\t\t\t\t<div class=\"cd-filter-block\">\n");
+      out.write("\t\t\t\t\t<h4>Radio buttons</h4>\n");
+      out.write("\n");
+      out.write("\t\t\t\t\t<ul class=\"cd-filter-content cd-filters list\" style=\"padding-left: 5%;\">\n");
+      out.write("\t\t\t\t\t\t<li>\n");
+      out.write("\t\t\t\t\t\t\t<input class=\"filter\" data-filter=\"\" type=\"radio\" name=\"radioButton\" id=\"radio1\" checked>\n");
+      out.write("\t\t\t\t\t\t\t<label class=\"radio-label\" for=\"radio1\">All</label>\n");
+      out.write("\t\t\t\t\t\t</li>\n");
+      out.write("\n");
+      out.write("\t\t\t\t\t\t<li>\n");
+      out.write("\t\t\t\t\t\t\t<input class=\"filter\" data-filter=\".radio2\" type=\"radio\" name=\"radioButton\" id=\"radio2\">\n");
+      out.write("\t\t\t\t\t\t\t<label class=\"radio-label\" for=\"radio2\">Choice 2</label>\n");
+      out.write("\t\t\t\t\t\t</li>\n");
+      out.write("\n");
+      out.write("\t\t\t\t\t\t<li>\n");
+      out.write("\t\t\t\t\t\t\t<input class=\"filter\" data-filter=\".radio3\" type=\"radio\" name=\"radioButton\" id=\"radio3\">\n");
+      out.write("\t\t\t\t\t\t\t<label class=\"radio-label\" for=\"radio3\">Choice 3</label>\n");
+      out.write("\t\t\t\t\t\t</li>\n");
+      out.write("\t\t\t\t\t</ul> <!-- cd-filter-content -->\n");
+      out.write("\t\t\t\t</div> <!-- cd-filter-block -->\n");
+      out.write("                                <p>\n");
+      out.write("                                    <label for=\"amount\">Price range:</label>\n");
+      out.write("                                    <input type=\"text\" id=\"amount\" readonly style=\"border:0; color:#f6931f; font-weight:bold;\">\n");
+      out.write("                                  </p>\n");
+      out.write("\n");
+      out.write("                                  <div id=\"slider-range\"></div>\n");
+      out.write("                                  \n");
+      out.write("                                  <div data-role=\"main\" class=\"ui-content\">\n");
+      out.write("\n");
+      out.write("                                        <div data-role=\"rangeslider\">\n");
+      out.write("                                          <label for=\"price-min\">Price Range:</label>\n");
+      out.write("                                          <input type=\"range\" name=\"price-min\" id=\"price-min\" value=\"200\" min=\"0\" max=\"1000\">\n");
+      out.write("                                          <!--<label for=\"price-max\">Price:</label>-->\n");
+      out.write("                                          <input type=\"range\" name=\"price-max\" id=\"price-max\" value=\"800\" min=\"0\" max=\"1000\">\n");
+      out.write("                                        </div>\n");
+      out.write("                                          \n");
+      out.write("                                    </div>\n");
+      out.write("                                  <input type=\"submit\" data-inline=\"true\" value=\"SUBMIT\">\n");
+      out.write("                                          \n");
+      out.write("                                          \n");
+      out.write("                                 \n");
+      out.write("\t\t\t</form>\n");
+      out.write("                         \n");
+      out.write("            \n");
+      out.write("\n");
+      out.write("            \n");
+      out.write("\t\t</div> <!-- cd-filter -->\n");
+      out.write("\n");
+      out.write("  </div>\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<section class=\"container2\">\n");
+      out.write("\n");
+      out.write("  <div class=\"books\">\n");
+      out.write("    <h2> Shop With Us</h2>\n");
+      out.write("    <p></p>\n");
+      out.write("\n");
+      out.write("  </div>\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("  \n");
+      out.write("\n");
+      out.write("<!-- <h1 style=\"text-align: center; margin:auto;\"> ------------- Feature Products ----------- </h1> -->\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("    \n");
+      out.write("\n");
+      out.write("      <!-- Product 1 -->\n");
+      out.write("      ");
+
+      try{
+                
+        Product product=new Product();
+        DbConnection con1=new DbConnection();
+        String sql="select * from products where ProductCategory=?";
+        
+        
+            PreparedStatement ps=con1.con.prepareStatement(sql);
+        
+            ps.setString(1,"Biographical");
+            ResultSet rs=ps.executeQuery();
+            while(rs.next()){
+                String ProductId,ProductPrice,ProductImage, ProductName;
+                ProductId=rs.getString(1);
+                ProductPrice=rs.getString(3);
+                ProductImage=rs.getString(9);
+                ProductName=rs.getString(2);
+                
+            
+      out.write("\n");
+      out.write("            <form class=\"items\" action=\"book1.jsp\" method=\"post\">\n");
+      out.write("              <div class=\"pimg\">\n");
+      out.write("                <img src=\"images/");
+      out.print(ProductImage);
+      out.write("\" alt=\"\">\n");
+      out.write("                <!--<div class=\"quickviewbtn\">Quick View</div>-->\n");
+      out.write("              </div>\n");
+      out.write("              <div class=\"details\">\n");
+      out.write("                <h3 class=\"item\" title=\"ODI\"> ");
+      out.print(ProductName);
+      out.write(" </h3><br>\n");
+      out.write("                Price : <span class=\"price\"> ");
+      out.print(ProductPrice);
+      out.write(" </span><br><br>\n");
+      out.write("                <input type=\"text\" hidden class=\"\" value=\"");
+      out.print(ProductId);
+      out.write("\" name=\"ProductId\">\n");
+      out.write("                \n");
+      out.write("                  <!--<input type=\"text\" hidden value=\"go\" onclick=\"window.location.href='book1.jsp'>-->\n");
+      out.write("                 \n");
+      out.write("<!--                  <button type=\"button\" class=\"addbtn\" name=\"button\">Add To Cart</button>-->\n");
+      out.write("                <input type=\"submit\" value=\"View Product\" class=\"addbtn\">\n");
+      out.write("              </div>\n");
+      out.write("            </form>\n");
+      out.write("      ");
+
+           
+            
+            }
+            }
+            catch (Exception ex) {
+            System.out.println(ex);
+        }
+            
+      out.write("  \n");
+      out.write("    \n");
+      out.write("\n");
+      out.write("              <!-- Product 12 -->\n");
+      out.write("\n");
+      out.write("        \n");
+      out.write("\n");
+      out.write("\n");
+      out.write("          <!-- <div class=\"cart\">\n");
+      out.write("\n");
+      out.write("          </div> -->\n");
+      out.write("          <!--<a href=\"#\" style=\"text-decoration: none; font-weight: bold;\">-->\n");
+      out.write("\n");
+      out.write("    \n");
+      out.write("    <!-- End of .products -->\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<!-- End of .cardholder -->\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("</section>\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>\n");
+      out.write("<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>\n");
+      out.write("<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>\n");
+      out.write("<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>\n");
+      out.write("<script  src=\"js/index.js\"></script>\n");
+      out.write(" <script src=\"https://code.jquery.com/ui/1.12.1/jquery-ui.js\"></script>\n");
+      out.write("  <script>\n");
+      out.write("  $( function() {\n");
+      out.write("    $( \"#slider-range\" ).slider({\n");
+      out.write("      range: true,\n");
+      out.write("      min: 0,\n");
+      out.write("      max: 500,\n");
+      out.write("      values: [ 75, 300 ],\n");
+      out.write("      slide: function( event, ui ) {\n");
+      out.write("        $( \"#amount\" ).val( \"$\" + ui.values[ 0 ] + \" - $\" + ui.values[ 1 ] );\n");
+      out.write("      }\n");
+      out.write("    });\n");
+      out.write("    $( \"#amount\" ).val( \"$\" + $( \"#slider-range\" ).slider( \"values\", 0 ) +\n");
+      out.write("      \" - $\" + $( \"#slider-range\" ).slider( \"values\", 1 ) );\n");
+      out.write("  } );\n");
+      out.write("  </script>\n");
+      out.write("</body>\n");
+      out.write("\n");
+      out.write("</html>7\n");
+    } catch (Throwable t) {
+      if (!(t instanceof SkipPageException)){
+        out = _jspx_out;
+        if (out != null && out.getBufferSize() != 0)
+          out.clearBuffer();
+        if (_jspx_page_context != null) _jspx_page_context.handlePageException(t);
+        else throw new ServletException(t);
+      }
+    } finally {
+      _jspxFactory.releasePageContext(_jspx_page_context);
+    }
+  }
+}
